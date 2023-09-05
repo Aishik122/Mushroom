@@ -1,7 +1,9 @@
 pandas
 numpy
 matplotlib
+dill
 seaborn 
 scikit-learn 
 Flask
+
 -e .
