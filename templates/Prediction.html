@@ -12,7 +12,7 @@
         </ul>
     </div>
     <div class='Container'>
-        <form action="" method="post">
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
             <h2> Prediction </h2>
             <div class='content'>
                 <div class="input-box">
@@ -21,23 +21,23 @@
                 </div>
                 <div class="input-box">
                     <lebel for ="Gill-Size"> Gill-size </label>
-                    <input type="text" placeholder="Enter Gill-Size of Mushroom" name="gill-size" required>
+                    <input type="text" placeholder="Enter Gill-Size of Mushroom" name="gill_size" required>
                 </div>
                 <div class="input-box">
                     <lebel for ="gill-color"> Gill-Color </label>
-                    <input type="text" placeholder="Enter Gill-Color of Mushroom" name="gill-color" required>
+                    <input type="text" placeholder="Enter Gill-Color of Mushroom" name="gill_color" required>
                 </div>
                 <div class="input-box">
                     <lebel for ="stalk-shape"> Stalk-Shape </label>
-                    <input type="text" placeholder="Enter Stalk-Shape of Mushroom" name="stalk-shape" required>
+                    <input type="text" placeholder="Enter Stalk-Shape of Mushroom" name="stalk_shape" required>
                 </div>
                 <div class="input-box">
                     <lebel for ="stalk-root"> Stalk-Root </label>
-                    <input type="text" placeholder="Enter stalk-root Mushroom" name="stalk-root" required>
+                    <input type="text" placeholder="Enter stalk-root Mushroom" name="stalk_root" required>
                 </div>
                 <div class="input-box">
                     <lebel for ="spore-print-color"> Spore-Print-Color </label>
-                    <input type="text" placeholder="Enter Spore-Print-Color of Mushroom" name="spore-print-color" required>
+                    <input type="text" placeholder="Enter Spore-Print-Color of Mushroom" name="spore_print_color" required>
                 </div>
                 <div class="input-box">
                     <lebel for ="population"> Population </label>
@@ -51,7 +51,9 @@
             </div>
         </form>
     </div>
-
+    <h2>
+        The Mushroom is {{results}}
+    </h2>
 </body>
    
 </html>
