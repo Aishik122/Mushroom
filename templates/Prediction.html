@@ -5,18 +5,53 @@
     <link rel="stylesheet" type="text/css" href="pred_style.css">
 </head>
 <body>
-    <header>
-        <div class="main">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="Prediction.html">Prediction</a></li>
-            </ul>
-        </div>
-
-</body>
+    <div class="main">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Prediction.html">Prediction</a></li>
+        </ul>
+    </div>
     <div class='Container'>
         <form action="" method="post">
-            <h2> Odor </h2>
+            <h2> Prediction </h2>
+            <div class='content'>
+                <div class="input-box">
+                    <lebel for ="Odor"> Odor </label>
+                    <input type="text" placeholder="Enter Odor of Mushroom" name="odor" required>
+                </div>
+                <div class="input-box">
+                    <lebel for ="Gill-Size"> Gill-size </label>
+                    <input type="text" placeholder="Enter Gill-Size of Mushroom" name="gill-size" required>
+                </div>
+                <div class="input-box">
+                    <lebel for ="gill-color"> Gill-Color </label>
+                    <input type="text" placeholder="Enter Gill-Color of Mushroom" name="gill-color" required>
+                </div>
+                <div class="input-box">
+                    <lebel for ="stalk-shape"> Stalk-Shape </label>
+                    <input type="text" placeholder="Enter Stalk-Shape of Mushroom" name="stalk-shape" required>
+                </div>
+                <div class="input-box">
+                    <lebel for ="stalk-root"> Stalk-Root </label>
+                    <input type="text" placeholder="Enter stalk-root Mushroom" name="stalk-root" required>
+                </div>
+                <div class="input-box">
+                    <lebel for ="spore-print-color"> Spore-Print-Color </label>
+                    <input type="text" placeholder="Enter Spore-Print-Color of Mushroom" name="spore-print-color" required>
+                </div>
+                <div class="input-box">
+                    <lebel for ="population"> Population </label>
+                    <input type="text" placeholder="Enter Population of Mushroom" name="population" required>
+                </div>
+            </div>
+            <div class = "button-container">
+                <button>
+                    Submit 
+                </button>
+            </div>
         </form>
     </div>
+
+</body>
+   
 </html>
