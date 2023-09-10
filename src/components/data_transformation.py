@@ -24,7 +24,7 @@ class DataTransformation:
     def get_data_transformer_object(self):
         try:
             columns = ['odor','gill-size','gill-color','stalk-shape','stalk-root','spore-print-color','population']
-            pipeline = Pipeline([('last_hope', OrdinalEncoder()),('standard_scaler', StandardScaler())])
+            pipeline = Pipeline([('Odical Encoder', OrdinalEncoder()),('standard_scaler', StandardScaler())])
             preprocessor=ColumnTransformer([('pipe',pipeline,columns)])
             return preprocessor
             
@@ -37,6 +37,31 @@ class DataTransformation:
             train_df=pd.read_csv(train_path)
             test_df=pd.read_csv(test_path)
             logging.info("read train and test data completed")
+            
+            logging.info("Change names for preprocessing")
+            train_df.replace({"class":{'e':'edible','p':'poisonous'},
+                            "odor":{'a':'almond','l':'anise','c':'creosote','y':'fishy','f':'foul','m':'musty','n':'none','p':'pungent','s':'spicy'},
+                            "gill-size":{'b':'broad','n':'narrow'},
+                            "gill-color":{'k':'black','n':'brown','b':'buff','h':'chocolate','g':'gray','r':'green','o':'orange','p':'pink','u':'purple','e':'red',
+                                            'w':'white','y':'yellow'},
+                            "stalk-shape":{'e':'enlarging','t':'tapering'},
+                            "stalk-root":{'b':'bulbous','c':'club','u':'cup','e':'equal','z':'rhizomorphs','r':'rooted'},
+                            "spore-print-color":{'k':'black','n':'brown','b':'buff','h':'chocolate','r':'green','o':'orange','u':'purple','w':'white','y':'yellow'},
+                            "population":{'a':'abundant','c':'clustered','n':'numerous','s':'scattered','v':'several','y':'solitary'}
+                            },inplace=True)
+            logging.info('train_df replace done')
+            test_df.replace({"class":{'e':'edible','p':'poisonous'},
+                            "odor":{'a':'almond','l':'anise','c':'creosote','y':'fishy','f':'foul','m':'musty','n':'none','p':'pungent','s':'spicy'},
+                            "gill-size":{'b':'broad','n':'narrow'},
+                            "gill-color":{'k':'black','n':'brown','b':'buff','h':'chocolate','g':'gray','r':'green','o':'orange','p':'pink','u':'purple','e':'red',
+                                            'w':'white','y':'yellow'},
+                            "stalk-shape":{'e':'enlarging','t':'tapering'},
+                            "stalk-root":{'b':'bulbous','c':'club','u':'cup','e':'equal','z':'rhizomorphs','r':'rooted'},
+                            "spore-print-color":{'k':'black','n':'brown','b':'buff','h':'chocolate','r':'green','o':'orange','u':'purple','w':'white','y':'yellow'},
+                            "population":{'a':'abundant','c':'clustered','n':'numerous','s':'scattered','v':'several','y':'solitary'}
+                            },inplace=True)
+            
+            
             
             train_df_x=train_df.drop(columns=['class'])
             train_df_y=train_df['class']
