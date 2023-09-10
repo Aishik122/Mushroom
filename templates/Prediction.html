@@ -2,12 +2,12 @@
 <html>
 <head>
     <title>Mushroom Edibility Prediction</title>
-    <link rel="stylesheet" type="text/css" href="pred_style.css">
+    <link rel="stylesheet" type="text/css" href="static\pred_style.css">
 </head>
 <body>
     <div class="main">
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="Prediction.html">Prediction</a></li>
         </ul>
     </div>
@@ -16,32 +16,32 @@
             <h2> Prediction </h2>
             <div class='content'>
                 <div class="input-box">
-                    <lebel for ="Odor"> Odor </label>
+                    <lebel for ="odor"> odor </label>
                     <input type="text" placeholder="Enter Odor of Mushroom" name="odor" required>
                 </div>
                 <div class="input-box">
-                    <lebel for ="Gill-Size"> Gill-size </label>
-                    <input type="text" placeholder="Enter Gill-Size of Mushroom" name="gill_size" required>
+                    <lebel for ="gill_size"> gill_size </label>
+                    <input type="text" placeholder="Enter gill_size of Mushroom" name="gill_size" required>
                 </div>
                 <div class="input-box">
-                    <lebel for ="gill-color"> Gill-Color </label>
-                    <input type="text" placeholder="Enter Gill-Color of Mushroom" name="gill_color" required>
+                    <lebel for ="gill_color"> gill_color </label>
+                    <input type="text" placeholder="Enter gill_color of Mushroom" name="gill_color" required>
                 </div>
                 <div class="input-box">
-                    <lebel for ="stalk-shape"> Stalk-Shape </label>
-                    <input type="text" placeholder="Enter Stalk-Shape of Mushroom" name="stalk_shape" required>
+                    <lebel for ="stalk_shape"> stalk_shape </label>
+                    <input type="text" placeholder="Enter stalk_shape of Mushroom" name="stalk_shape" required>
                 </div>
                 <div class="input-box">
-                    <lebel for ="stalk-root"> Stalk-Root </label>
-                    <input type="text" placeholder="Enter stalk-root Mushroom" name="stalk_root" required>
+                    <lebel for ="stalk_root"> stalk_root </label>
+                    <input type="text" placeholder="Enter stalk_root Mushroom" name="stalk_root" required>
                 </div>
                 <div class="input-box">
-                    <lebel for ="spore-print-color"> Spore-Print-Color </label>
-                    <input type="text" placeholder="Enter Spore-Print-Color of Mushroom" name="spore_print_color" required>
+                    <lebel for ="spore_print_color"> spore_print_color </label>
+                    <input type="text" placeholder="Enter spore_print_color of Mushroom" name="spore_print_color" required>
                 </div>
                 <div class="input-box">
-                    <lebel for ="population"> Population </label>
-                    <input type="text" placeholder="Enter Population of Mushroom" name="population" required>
+                    <lebel for ="population"> population </label>
+                    <input type="text" placeholder="Enter population of Mushroom" name="population" required>
                 </div>
             </div>
             <div class = "button-container">
@@ -50,10 +50,11 @@
                 </button>
             </div>
         </form>
+        <h2>
+            The Mushroom is {{results}}
+        </h2>
     </div>
-    <h2>
-        The Mushroom is {{results}}
-    </h2>
+    
 </body>
    
 </html>

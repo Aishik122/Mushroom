@@ -13,14 +13,14 @@ class PredictPipeline(object):
             preprocessor_path='artifacts\preprocessor.pkl'
             model=load_object(model_path)
             preprocessor=load_object(preprocessor_path)
-            data_scaled=preprocessor.transform(features)
+            data_scaled=preprocessor.fit_transform(features)
             
             preds=model.predict(data_scaled)[0]
             
             if preds==0:
-                return "Poisonous"
-            else:
                 return "Edible"
+            else:
+                return "Poisonous"
             
         except Exception as e:
             raise CustomException(e,sys)
@@ -28,7 +28,8 @@ class PredictPipeline(object):
         
 class CustomData:
     def __init__(self, 
-                 odor:str,gill_size:str,gill_color:str,stalk_shape:str,stalk_root:str,spore_print_color:str,population:str):
+                 odor:str,
+                 gill_size:str,gill_color:str,stalk_shape:str,stalk_root:str,spore_print_color:str,population:str):
         self.odor =odor
         self.gill_size =gill_size
         self.gill_color =gill_color
@@ -40,8 +41,8 @@ class CustomData:
     def get_data_frame(self):
         try:
             custom_data_input_dict = {
-                'odor':[self.odor],'gill_size':[self.gill_size],'gill_color':[self.gill_color],
-                'stalk_shape':[self.stalk_shape],'stalk_root':[self.stalk_root],'spore_print_color':[self.spore_print_color],
+                'odor':[self.odor],'gill-size':[self.gill_size],'gill-color':[self.gill_color],
+                'stalk-shape':[self.stalk_shape],'stalk-root':[self.stalk_root],'spore-print-color':[self.spore_print_color],
                 'population':[self.population]
             }
             return pd.DataFrame(custom_data_input_dict)
