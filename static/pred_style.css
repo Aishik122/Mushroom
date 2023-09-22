@@ -56,42 +56,44 @@ ul li a:hover{
     box-shadow:0 15px 20px rgba(0,0,0,0.6)
 }
 h2{
-    font-size: 26px;
+    font-size: 30px;
     font-weight: blod;
     text-align: left;
     color: #fff;
     padding-bottom: 8px;
     border-bottom: 1px solid silver;
+    padding-left: 30px; ;
 
 }
 .content{
     
-    flex-warp: warp;
+    
     justify-content: space-between;
     padding: 20px 0;
 
 }
-.input-box{
+.form-control{
     display:flex;
     flex-wrap: wrap;
-    width: 50%;
+    width:100%;
     padding-bottom:15px;
-    color: silver;
+    color: rgb(0, 0, 0);
 }
-.input-box:nth-child(2n){
+.form-label{
+    color: rgb(223, 228, 191);
+}
+.form-label:nth-child(2n){
     justify-content:end;
 }
-.input-box input{
+.placeholder{
     height: 40px;
     width: 95%;
     padding: 0 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff2020;
     outline: none;
 }
-.input-box input:is(:focus,:valid){
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2)   
-}
+
 
 .button-container{
     margin: 15px 0;
@@ -111,4 +113,11 @@ h2{
 }
 .button-container button:hover{
     background-image: linear-gradient(to right,#61045f,#aa076b);
+}
+
+.pred{
+    position: absolute;
+    padding: left 10px;
+    bottom: 10px;
+
 }

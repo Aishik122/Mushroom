@@ -15,34 +15,180 @@
         <form action="{{ url_for('predict_datapoint')}}" method="post">
             <h2> Prediction </h2>
             <div class='content'>
-                <div class="input-box">
-                    <lebel for ="odor"> odor </label>
-                    <input type="text" placeholder="Enter Odor of Mushroom" name="odor" required>
-                </div>
-                <div class="input-box">
-                    <lebel for ="gill_size"> gill_size </label>
-                    <input type="text" placeholder="Enter gill_size of Mushroom" name="gill_size" required>
-                </div>
-                <div class="input-box">
-                    <lebel for ="gill_color"> gill_color </label>
-                    <input type="text" placeholder="Enter gill_color of Mushroom" name="gill_color" required>
-                </div>
-                <div class="input-box">
-                    <lebel for ="stalk_shape"> stalk_shape </label>
-                    <input type="text" placeholder="Enter stalk_shape of Mushroom" name="stalk_shape" required>
-                </div>
-                <div class="input-box">
-                    <lebel for ="stalk_root"> stalk_root </label>
-                    <input type="text" placeholder="Enter stalk_root Mushroom" name="stalk_root" required>
-                </div>
-                <div class="input-box">
-                    <lebel for ="spore_print_color"> spore_print_color </label>
-                    <input type="text" placeholder="Enter spore_print_color of Mushroom" name="spore_print_color" required>
-                </div>
-                <div class="input-box">
-                    <lebel for ="population"> population </label>
-                    <input type="text" placeholder="Enter population of Mushroom" name="population" required>
-                </div>
+                
+                <label class="form-label">odor</label>
+                <select class="form-control" name="odor" placeholder="odor" required>
+                    <option class="placeholder" selected disabled value="">odor</option>
+                    <option value="pungent">
+                    pungent
+                    </option>
+                    <option value="almond">
+                    almond
+                    </option>
+                    <option value="anise">
+                    anise
+                    </option>
+                    <option value="none">
+                    none
+                    </option>
+                    <option value="foul">
+                    foul
+                    </option>
+                    <option value="creosote">
+                    creosote
+                    </option>
+                    <option value="fishy">
+                    fishy
+                    </option>
+                    <option value="spicy">
+                    spicy
+                    </option>
+                    <option value="musty">
+                    musty
+                    </option>
+                    </select>
+
+                <label class="form-label">gill_size</label>
+                <select class="form-control" name="gill_size" placeholder="gill_size" required>
+                    <option class="placeholder" selected disabled value="">gill_size</option>
+                    <option value="narrow">
+                    narrow
+                    </option>
+                    <option value="broad">
+                    broad
+                    </option>
+                    </select>
+
+                <label class="form-label">gill-color</label>
+                <select class="form-control" name="gill-color" placeholder="gill-color" required>
+                    <option class="placeholder" selected disabled value="">gill-color</option>
+                    <option value="black">
+                    black
+                    </option>
+                    <option value="brown">
+                    brown
+                    </option>
+                    <option value="gray">
+                    gray
+                    </option>
+                    <option value="pink">
+                    pink
+                    </option>
+                    <option value="white">
+                    white
+                    </option>
+                    <option value="chocolate">
+                    chocolate
+                    </option>
+                    <option value="purple">
+                    purple
+                    </option>
+                    <option value="red">
+                    red
+                    </option>
+                    <option value="buff">
+                    buff
+                    </option>
+                    <option value="green">
+                    green
+                    </option>
+                    <option value="yellow">
+                    yellow
+                    </option>
+                    <option value="orange">
+                    orange
+                    </option>
+                </select>
+
+
+                <label class="form-label">stalk-shape</label>
+                <select class="form-control" name="stalk-shape" placeholder="stalk-shape" required>
+                    <option class="placeholder" selected disabled value="">stalk-shape</option>
+                    <option value="enlarging">
+                        enlarging
+                    </option>
+                    <option value="tapering">
+                        tapering
+                    </option>
+                </select>
+
+
+                <label class="form-label">stalk-root</label>
+                <select class="form-control" name="stalk-root" placeholder="stalk-root" required>
+                    <option class="placeholder" selected disabled value="">stalk-root</option>
+                    <option value="equal">
+                        equal
+                    </option>
+                    <option value="club">
+                        club
+                    </option>
+                    <option value="bulbous">
+                        bulbous
+                    </option>
+                    <option value="rooted">
+                        rooted
+                    <option value="?">
+                        ?
+                    </option>
+                </select>
+
+
+                <label class="form-label">spore-print-color</label>
+                <select class="form-control" name="spore-print-color" placeholder="spore-print-color" required>
+                    <option class="placeholder" selected disabled value="">spore-print-color</option>
+                    <option value="black">
+                        black
+                    </option>
+                    <option value="brown">
+                        brown
+                    </option>
+                    <option value="purple">
+                        purple
+                    </option>
+                    <option value="chocolate">
+                        chocolate
+                    </option>
+                    <option value="white">
+                        white
+                    </option>
+                    <option value="green">
+                        green
+                    </option>
+                    <option value="orange">
+                        orange
+                    </option>
+                    <option value="yellow">
+                        yellow
+                    </option>
+                    <option value="buff">
+                        buff
+                    </option>
+                    </select>
+
+
+                <label class="form-label">population</label>
+                <select class="form-control" name="population" placeholder="population" required>
+                    <option class="placeholder" selected disabled value="">population</option>
+                    <option value="scattered">
+                        scattered
+                    </option>
+                    <option value="numerous">
+                        numerous
+                    </option>
+                    <option value="abundant">
+                        abundant
+                    </option>
+                    <option value="several">
+                        several
+                    </option>
+                    <option value="solitary">
+                        solitary
+                    </option>
+                    <option value="clustered">
+                        clustered
+                    </option>
+                    </select>
+
             </div>
             <div class = "button-container">
                 <button>
@@ -51,7 +197,7 @@
             </div>
         </form>
         <h2>
-            The Mushroom is {{results}}
+                      <div class = "pred">The Mushroom is {{results}}</div>    
         </h2>
     </div>
     

@@ -24,7 +24,7 @@ class DataTransformation:
     def get_data_transformer_object(self):
         try:
             columns = ['odor','gill-size','gill-color','stalk-shape','stalk-root','spore-print-color','population']
-            pipeline = Pipeline([('Odical Encoder', OrdinalEncoder()),('standard_scaler', StandardScaler())])
+            pipeline = Pipeline([('Odical Encoder', OrdinalEncoder(handle_unknown='use_encoded_value', unknown_value=-1)),('standard_scaler', StandardScaler())])
             preprocessor=ColumnTransformer([('pipe',pipeline,columns)])
             return preprocessor
             
@@ -93,7 +93,7 @@ class DataTransformation:
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 obj=preprocessing_obj
             )
-            print("out test data is \n ******************************** \n", test_arr)
+            
             return (
                 train_arr, test_arr,self.data_transformation_config.preprocessor_obj_file_path,
             )
