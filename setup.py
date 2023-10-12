@@ -13,7 +13,7 @@ def get_requirements(file_path:str)->list[str]:
 
 setup(
     name='Mushrooms',
-    version='0.0.1',
+    version='1.0.0',
     author='Aishik',
     author_email='aishikchatterjee12@gmail.com',
     packages=find_packages(),
